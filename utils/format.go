@@ -21,11 +21,11 @@ import (
 
 func FormatCUSTOME(num string) string {
 	floatNum, _ := strconv.ParseFloat(num, 64)
-	return fmt.Sprintf("%.4f", floatNum/math.Pow10(18)) + " VPC"
+	return fmt.Sprintf("%.4f", floatNum/math.Pow10(18)) + " CUSTOME"
 }
 
 func FormatCUSTOMEFromGwei(gwei uint64) string {
-	return fmt.Sprintf("%.4f", float64(gwei)/math.Pow10(9)) + " VPC"
+	return fmt.Sprintf("%.4f", float64(gwei)/math.Pow10(9)) + " CUSTOME"
 }
 
 func FormatCUSTOMEFromGweiShort(gwei uint64) string {
@@ -33,7 +33,7 @@ func FormatCUSTOMEFromGweiShort(gwei uint64) string {
 }
 
 func FormatFullEthFromGwei(gwei uint64) string {
-	return fmt.Sprintf("%v VPC", uint64(float64(gwei)/math.Pow10(9)))
+	return fmt.Sprintf("%v CUSTOME", uint64(float64(gwei)/math.Pow10(9)))
 }
 
 func FormatCUSTOMEAddCommasFromGwei(gwei uint64) template.HTML {
@@ -206,7 +206,7 @@ func formatAmount(amount *big.Int, unit string, digits int, maxPreCommaDigitsBef
 	// define display unit & digits used per unit max
 	displayUnit := " " + unit
 	var unitDigits int
-	if unit == "VPC" || unit == "Ether" {
+	if unit == "CUSTOME" || unit == "Ether" {
 		unitDigits = 18
 	} else if unit == "GWei" {
 		unitDigits = 9

@@ -12,8 +12,8 @@ export function toDecimalUnit(amount: number, decimals?: number): number {
 /**
  * Converts a raw amount to a human-readable string with proper decimal places and optional unit
  * @param amount The amount to format
- * @param decimals The number of decimal places in the raw amount (default: 18 for VPC)
- * @param unit Optional unit to append to the result (e.g., "VPC", "GWEI")
+ * @param decimals The number of decimal places in the raw amount (default: 18 for CUSTOME)
+ * @param unit Optional unit to append to the result (e.g., "CUSTOME", "GWEI")
  * @param precision Number of decimal places to show in the result
  * @returns Formatted string with the readable amount
  */

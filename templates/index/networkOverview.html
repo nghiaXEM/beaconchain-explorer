@@ -43,8 +43,8 @@
             <div class="text-end p-2">
               <div class="text-secondary mb-0">
                 <span data-bs-toggle="tooltip" data-bs-placement="top"
-                  data-bs-original-title="{{ if eq .EnteringValidatorCount 0 }}Currently there are no pending Validators{{ if .EtherChurnPerEpoch }} (churn limit is {{ formatEthAddCommasFromGwei .EtherChurnPerEpoch }} VPC per epoch or {{ formatEthAddCommasFromGwei .EtherChurnPerDay }} VPC per day){{ end }}{{ else }}{{ if .EtherChurnPerEpoch }}It should take at least {{ .NewDepositProcessAfter }} for {{ formatEthAddCommasFromGwei .EnteringEtherAmount }} VPC in pending deposits to be processed (churn limit is {{ formatEthAddCommasFromGwei .EtherChurnPerEpoch }} VPC per epoch or {{ formatEthAddCommasFromGwei .EtherChurnPerDay }} VPC per day){{ else }}Currently there are no pending Validators (churn limit is {{ .ValidatorsPerEpoch }} per epoch or {{ .ValidatorsPerDay }} per day with {{ .ActiveValidatorCount }} validators){{ end }}{{ end }}"
-                  data-bind="attr: {'data-bs-original-title': entering_val() > 0 ? (churn_ether() ? 'It should take at least ' + queue_delay() + ' for ' + $root.formatEth(entering_ether()) + ' VPC in pending deposits to be processed (churn limit is ' + $root.formatEth(churn_ether()) + ' VPC per epoch or ' + $root.formatEth(churn_ether_day()) + ' VPC per day)' : 'Currently there are no pending Validators (churn limit is ' + churn_epoch() + ' per epoch or ' + churn_day() + ' per day with ' + active_val() + ' validators)') : 'Currently there are no pending Validators' + (churn_ether() ? ' (churn limit is ' + $root.formatEth(churn_ether()) + ' VPC per epoch or ' + $root.formatEth(churn_ether_day()) + ' VPC per day)' : '')}">
+                  data-bs-original-title="{{ if eq .EnteringValidatorCount 0 }}Currently there are no pending Validators{{ if .EtherChurnPerEpoch }} (churn limit is {{ formatEthAddCommasFromGwei .EtherChurnPerEpoch }} CUSTOME per epoch or {{ formatEthAddCommasFromGwei .EtherChurnPerDay }} CUSTOME per day){{ end }}{{ else }}{{ if .EtherChurnPerEpoch }}It should take at least {{ .NewDepositProcessAfter }} for {{ formatEthAddCommasFromGwei .EnteringEtherAmount }} CUSTOME in pending deposits to be processed (churn limit is {{ formatEthAddCommasFromGwei .EtherChurnPerEpoch }} CUSTOME per epoch or {{ formatEthAddCommasFromGwei .EtherChurnPerDay }} CUSTOME per day){{ else }}Currently there are no pending Validators (churn limit is {{ .ValidatorsPerEpoch }} per epoch or {{ .ValidatorsPerDay }} per day with {{ .ActiveValidatorCount }} validators){{ end }}{{ end }}"
+                  data-bind="attr: {'data-bs-original-title': entering_val() > 0 ? (churn_ether() ? 'It should take at least ' + queue_delay() + ' for ' + $root.formatEth(entering_ether()) + ' CUSTOME in pending deposits to be processed (churn limit is ' + $root.formatEth(churn_ether()) + ' CUSTOME per epoch or ' + $root.formatEth(churn_ether_day()) + ' CUSTOME per day)' : 'Currently there are no pending Validators (churn limit is ' + churn_epoch() + ' per epoch or ' + churn_day() + ' per day with ' + active_val() + ' validators)') : 'Currently there are no pending Validators' + (churn_ether() ? ' (churn limit is ' + $root.formatEth(churn_ether()) + ' CUSTOME per epoch or ' + $root.formatEth(churn_ether_day()) + ' CUSTOME per day)' : '')}">
                   Pending Validators
                 </span>
               </div>
@@ -60,13 +60,13 @@
             <div class="p-2">
               <div class="text-secondary mb-0">Staked Ether</div>
               <h5 class="font-weight-normal mb-0">
-                <span data-bs-toggle="tooltip" data-bs-placement="top" title="The sum of all effective balances" data-bind="text: $root.formatEth(eligible()) + ' VPC'">{{ formatEthAddCommasFromGwei .TotalEligibleEther }} VPC</span>
+                <span data-bs-toggle="tooltip" data-bs-placement="top" title="The sum of all effective balances" data-bind="text: $root.formatEth(eligible()) + ' CUSTOME'">{{ formatEthAddCommasFromGwei .TotalEligibleEther }} CUSTOME</span>
               </h5>
             </div>
             <div class="text-end p-2">
               <div class="text-secondary mb-0">Average Balance</div>
               <h5 class="font-weight-normal mb-0">
-                <span data-bs-toggle="tooltip" data-bs-placement="top" title="The average current balance of all validators staked" data-bind="text: $root.formatEth(avg_balance()) + ' VPC'">{{ formatEthFromGwei .AverageValidatorBalance }}</span>
+                <span data-bs-toggle="tooltip" data-bs-placement="top" title="The average current balance of all validators staked" data-bind="text: $root.formatEth(avg_balance()) + ' CUSTOME'">{{ formatEthFromGwei .AverageValidatorBalance }}</span>
               </h5>
             </div>
           </div>

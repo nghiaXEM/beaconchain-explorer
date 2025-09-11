@@ -131,7 +131,7 @@ const ValidatorOption = (props: OptionProps<IValidator, false>) => {
       <span className="validator-item">
         <span className="validator-index">{data.index}</span>
         <span className="validator-pubkey">{data.pubkey}</span>
-        <span className="validator-balance">{formatBalance(data.balance, "VPC")}</span>
+        <span className="validator-balance">{formatBalance(data.balance, "CUSTOME")}</span>
         <span className="validator-status">{formatStatus(data.status)}</span>
       </span>
     </span>

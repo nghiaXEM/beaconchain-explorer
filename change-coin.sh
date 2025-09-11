@@ -8,10 +8,10 @@ set -euo pipefail
 FOLDERS=("templates" "ui-package" "utils")
 
 # Chuỗi cần thay
-NEED_REPLACE="ETH"
+NEED_REPLACE="CUSTOME"
 
 # Chuỗi thay thế
-REPLACE_TEXT="CUSTOME"
+REPLACE_TEXT="YOURCOIN"
 
 # ======================
 # Thực thi
